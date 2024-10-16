@@ -28,7 +28,8 @@ $$
 ## 2. Median
 The median is the middle value of the dataset when ordered from least to greatest. If the dataset has an even number of values, the median is the average of the two middle numbers.
 
-1. order dataset form ascending
+**Order dataset form ascending**
+
 $$
 \text{29,31,32,32,33,34,35,36,37,38,39,40,[41],42,44,45,46,48,49,50,51,52,53,55,60}
 $$
@@ -82,7 +83,7 @@ $$
 $$
 
 
-Any value below the lower bound or above the upper bound is considered an outlier. For your dataset:
+Any value below the lower bound or above the upper bound is considered an outlier. For the dataset:
 
 $$
 \text{Lower bound} = 35−(1.5×14) = 14
@@ -117,12 +118,12 @@ $$
 \sigma^2 = {\frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n}}
 $$
 
-**Population Standard Deviation $\sigma$** :
+- Population Standard Deviation $\sigma$ :
 $$
 \sigma = \sqrt{\sigma^2}
 $$
 ---
-**Sample Variance $s^2$** :
+- Sample Variance $s^2$ :
 
 *Uses n - 1 in the denominator (correction).*
 
@@ -155,16 +156,19 @@ Where:
     ```
 
 2. Sum of squared differences:
-    $$
-    100 + 25 + 0 + 25 + 100 = 250
-    $$
+   
+$$
+100 + 25 + 0 + 25 + 100 = 250
+$$
 
 3. Divide by the number of data points:
-    $$
-    \sigma^2 = \frac{250}{5} = 50
-    $$
+
+$$
+\sigma^2 = \frac{250}{5} = 50
+$$
 
 4. Take the square root to get the standard deviation:
+
  $$
  Standard Deviation= \sqrt{Variance}
  $$
@@ -186,14 +190,19 @@ Where:
 - $\sigma$ is the standard deviation.
 
 1. Find the mean $\bar{x}$ *(above)*: 
+
 $$
 Mean = 41
 $$
+
 2. Find the standard deviation (σ):
 
 
 Lets calucalte z-score for 46 :
 
 $$
-Z = \frac{46 - 41}{\sigma}
+Z = \frac{46 - 41}{7} \approx .7
 $$
+
+> [!TIP]
+> Thats mean 46 is above the mean with half standard deviation.
