@@ -17,3 +17,14 @@ Where:
 - $\bar{x}$ is the mean,
 - $\sigma$ is the standard deviation.
 ---
+
+<details>
+
+<summary>Solution:</summary>
+
+$$
+Z = \frac{85 - 75}{10} = 1
+$$
+
+Z score for sarah = 1 , that means sarah score is above average with 1 standard deviation.
+</details>
