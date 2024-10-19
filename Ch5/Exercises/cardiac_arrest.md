@@ -35,16 +35,10 @@ B. The relationship between mean call-to-shock time and survival rate is negativ
 
 C. The equation of the least squares line is:
 
-$$
 𝑦 = a𝑥 + b
-$$
 
 So, with a mean call-to-shock time of 10 minutes $y$
 
-$$
 𝑦 = −9.30(10) + 101.33 = 8.33
-$$
-
-
 
 </details>
