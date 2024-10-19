@@ -4,7 +4,7 @@
 It is a measure of the linear relationship between two continuous, numerical variables. It quantifies both the strength and the direction of the association between the variables.
 
 $$
-\text{r} = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt(\sum (x_i - \bar x)^2 \sum(y_i - \bar y))^2}
+\text{r} = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt(\sum (x_i - \bar x)^2 \sum(y_i - \bar y)^2)}
 $$
 
 Where:
@@ -51,12 +51,12 @@ You have the following dataset showing the number of hours spent practicing and 
 ### 1) Find r usng Pearson's Correlation
 
 $$
-\text{r} = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt(\sum (x_i - \bar x)^2 \sum(y_i - \bar y))^2}
+\text{r} = \frac{\sum (x_i - \bar x)(y_i - \bar y)}{\sqrt(\sum (x_i - \bar x)^2 \sum(y_i - \bar y)^2)}
 $$
 
 <br>
 
-| Student | X (Study Hours) | Y (Exam Score) | Xᵢ - X̄ (Deviation of X) | Yᵢ - Ȳ (Deviation of Y) | (Xᵢ - X̄)(Yᵢ - Ȳ) |
+| Student | X (Study Hours) | Y (Exam Score) | $(Xᵢ - \bar X)^2$ | $(Yᵢ - \bar Y)^2$ | $(Xᵢ - \bar X)$ $(Yᵢ - \bar Y)$  |
 |---------|-----------------|----------------|--------------------------|--------------------------|--------------------|
 | 1       | 2               | 55             | 2 - 3 = -1               | 55 - 64 = -9             | -1 * -9 = 9        |
 | 2       | 3               | 60             | 3 - 3 = 0                | 60 - 64 = -4             | 0 * -4 = 0         |
