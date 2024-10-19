@@ -65,4 +65,4 @@ Range: 0 to 1, where 1 indicates a perfect fit.
 
  A visual representation to show the relationship between two numerical variables. 
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)

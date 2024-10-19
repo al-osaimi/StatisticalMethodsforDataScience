@@ -24,10 +24,10 @@ The value of Pearson's r ranges between -1 and +1.
 - -1: Perfect negative correlation (as one variable increases, the other decreases proportionally).
 
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 #### Linear Relationship: 
 Pearson's correlation only measures the strength of **a linear relationship**. If the relationship is non-linear, Pearson's correlation may not be appropriate.
@@ -77,4 +77,4 @@ $$
 
 ### Scatter Plot: Study Hours Vs Exam Scores
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
