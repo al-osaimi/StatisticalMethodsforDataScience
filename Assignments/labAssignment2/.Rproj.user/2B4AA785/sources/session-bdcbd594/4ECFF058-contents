@@ -1,0 +1,17 @@
+ 
+fish_data <- read.csv("./Fish.csv")
+
+model_fish <- lm(Weight ~ Length1 + Length2 + Length3 + Height + Width, data = fish_data)
+
+# Define the new data for prediction
+new_data <- data.frame(
+  Length1 = c(28.5, 28.4),
+  Length2 = c(30.7, 31),
+  Length3 = c(30.7, 31),
+  Height = c(36.2, 36.2),
+  Width = c(14.2266, 14.2628)
+)
+
+# Predict the weights
+predicted_weights <- predict(model_fish, new_data)
+cat("Predicted weights for the input values:", predicted_weights, "\n")

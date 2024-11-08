@@ -1,0 +1,15 @@
+
+data("women")
+
+# weight as the dependent variable and height as the independent variable
+model_women <- lm(weight ~ height, data = women)
+
+summary(model_women)
+
+selected_item <- sample(women$height, 1)
+cat("Randomly selected height:", selected_item, "\n")
+
+new_height <- data.frame(height = selected_item)
+predicted_weight <- predict(model_women, new_height)
+cat("Estimated weight for height", selected_item ,"feet :", predicted_weight, "lbs \n")
+
