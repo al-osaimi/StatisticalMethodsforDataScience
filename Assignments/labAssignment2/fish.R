@@ -16,9 +16,9 @@ summary(model)
 input_values <- data.frame(
   Length1 = c(28.5, 28.4),
   Length2 = c(30.7, 31),
-  Length3 = c(30.7, 31),
-  Height = c(36.2, 36.2),
-  Width = c(14.2266, 14.2628)
+  Length3 = c(36.2, 36.2),
+  Height = c(14.2266, 14.2628),
+  Width = c(4.9594, 5.1042)
 )
 
 # Init a vector to store predictions
@@ -43,8 +43,6 @@ for (species in unique(fish_data$Species)) {
 
 print(predictions)
 
-# changing row names of data frame 
-rownames(predictions) <- c("Row1","Row2","Row3","Row4") 
 
 ggplot(predictions, aes(x = Species, y = Predicted_Weight, fill = as.factor(row.names(predictions)))) +
   geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
