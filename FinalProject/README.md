@@ -62,8 +62,8 @@ The dataset provided by tcp_client.py (file_processing_results.csv) contains the
 
 - `File_Name:` Name of the processed file.
 - `File_Type:` File extension/type.
-- `File_Size:` File size in bytes.
-- `Time_Taken:` Time taken for processing in seconds.
+- `File_Size:` File size in bytes (independent).
+- `Time_Taken:` Time taken for processing in seconds (dependent).
 - `Hash_Value:` SHA-256 hash of the file.
 
 
@@ -108,7 +108,7 @@ The scatterplot indicates a strong positive relationship between file size and t
 
 Outliers are extreme values that differ from most other data points in a dataset. 
 
-> There are no obvious outliers
+> We could identify file with size **1,442 KB** as outlier
 
 
 ## Build a predictive model 
