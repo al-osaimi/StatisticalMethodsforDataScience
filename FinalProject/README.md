@@ -104,6 +104,12 @@ Scatterplot to visualize relationship between File_Size and Time_Taken:
 
 The scatterplot indicates a strong positive relationship between file size and time taken.
 
+### Outliers
+
+Outliers are extreme values that differ from most other data points in a dataset. 
+
+> There are no obvious outliers
+
 
 ## Build a predictive model 
 
