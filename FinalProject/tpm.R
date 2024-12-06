@@ -3,7 +3,7 @@ library(ggplot2)
 library(caret)
 
 # Load the dataset
-data <- read.csv("C:/Users/Abdulrahman Alosaimi/Documents/StatisticalMethodsforDataScience/FinalProject/misc/file_processing_results.csv")
+data <- read.csv(".\\misc\\file_processing_results.csv")
 
 # Descriptive Analysis
 summary_stats <- summary(data[c("File_Size", "Time_Taken")])
