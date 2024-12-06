@@ -1,4 +1,4 @@
-# General Instructions
+# Statistical Methods for Data Analysis Final Project
 
 ## Problem Definition
 
