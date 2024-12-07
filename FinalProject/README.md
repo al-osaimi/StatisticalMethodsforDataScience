@@ -108,7 +108,16 @@ The scatterplot indicates a strong positive relationship between file size and t
 
 Outliers are extreme values that differ from most other data points in a dataset. 
 
-> We could identify file with size **1,442 KB** as outlier
+Outliers are data points that lie below the lower bound or above the upper bound, defined as:
+
+$$
+\text{Lower bound} = Q1 - 1.5 \times \text{IQR}
+$$
+$$
+\text{Upper bound} = Q3 + 1.5 \times \text{IQR}
+$$
+
+> No outliers exist in the dataset. ​
 
 
 ## Build a predictive model 
