@@ -1,4 +1,4 @@
-# General Instructions
+# Statistical Methods for Data Analysis Final Project
 
 ## Problem Definition
 
@@ -62,8 +62,8 @@ The dataset provided by tcp_client.py (file_processing_results.csv) contains the
 
 - `File_Name:` Name of the processed file.
 - `File_Type:` File extension/type.
-- `File_Size:` File size in bytes.
-- `Time_Taken:` Time taken for processing in seconds.
+- `File_Size:` File size in bytes (independent).
+- `Time_Taken:` Time taken for processing in seconds (dependent).
 - `Hash_Value:` SHA-256 hash of the file.
 
 
@@ -103,6 +103,21 @@ Scatterplot to visualize relationship between File_Size and Time_Taken:
 ![alt text](./img/image.png)
 
 The scatterplot indicates a strong positive relationship between file size and time taken.
+
+### Outliers
+
+Outliers are extreme values that differ from most other data points in a dataset. 
+
+Outliers are data points that lie below the lower bound or above the upper bound, defined as:
+
+$$
+\text{Lower bound} = Q1 - 1.5 \times \text{IQR}
+$$
+$$
+\text{Upper bound} = Q3 + 1.5 \times \text{IQR}
+$$
+
+> No outliers exist in the dataset. ​
 
 
 ## Build a predictive model 
