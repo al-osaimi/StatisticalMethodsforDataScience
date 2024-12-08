@@ -10,7 +10,6 @@ data <- read.csv("C:/Users/Abdulrahman Alosaimi/Documents/StatisticalMethodsforD
 summary_stats <- summary(data[c("File_Size", "Time_Taken")])
 print(summary_stats)
 
-group_by(data$File_Type) %>% summarise(count = n_distinct(data$File_Name))
 
 file_type_counts <- table(data$File_Type)
 
