@@ -14,6 +14,24 @@ print(summary_stats)
 file_type_counts <- table(data$File_Type)
 
 
+data$File_Size_KB <- data$File_Size / 1024
+
+ggplot(data, aes(x = File_Size_KB)) +
+  geom_histogram(binwidth = 80, fill = "blue", color = "black", alpha = 0.2) +
+  scale_x_continuous(
+    breaks = seq(0, max(data$File_Size_KB), by = 200), 
+    labels = function(x) paste0(x, " KB")
+  ) +
+  labs(
+    title = "Distribution of File Sizes (KB)",
+    x = "File Size (KB)",
+    y = "Frequency"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 0, hjust = 1) # Align labels to the left
+  )
+
 ggplot(data = as.data.frame(file_type_counts), aes(x = Var1, y = Freq)) +
   geom_bar(stat = "identity") +
   scale_fill_manual(values = colors) +
@@ -21,7 +39,6 @@ ggplot(data = as.data.frame(file_type_counts), aes(x = Var1, y = Freq)) +
   theme_minimal()
 
 
-# Scatterplot to visualize relationship between File_Size and Time_Taken
 ggplot(data, aes(x = File_Size, y = Time_Taken)) +
   geom_point(color = "blue", alpha = 0.7) +
   geom_smooth(method = "lm", color = "red", se = FALSE) +
@@ -39,14 +56,6 @@ ggplot(file_type_df, aes(x = "", y = Freq, fill = Var1)) +
   labs(title = "File Type Distribution",
        fill = "File Type") +
   theme_void()
-
-ggplot(data, aes(x = File_Type, y = (File_Size/1024), fill = File_Type)) +
-  geom_bar(stat = "identity") +
-  labs(title = "File Size vs File Type",
-       x = "File Type",
-       y = "File Size (KB)") +
-  theme_minimal() +
-  theme(legend.position = "none")
 
 
 # Correlation between File_Size and Time_Taken
