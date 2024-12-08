@@ -1,13 +1,26 @@
 # Load necessary libraries
 library(ggplot2)
 library(caret)
+library(dplyr)
 
 # Load the dataset
-data <- read.csv(".\\misc\\file_processing_results.csv")
+data <- read.csv("C:/Users/Abdulrahman Alosaimi/Documents/StatisticalMethodsforDataScience/FinalProject/misc/file_processing_results.csv")
 
 # Descriptive Analysis
 summary_stats <- summary(data[c("File_Size", "Time_Taken")])
 print(summary_stats)
+
+group_by(data$File_Type) %>% summarise(count = n_distinct(data$File_Name))
+
+file_type_counts <- table(data$File_Type)
+
+
+ggplot(data = as.data.frame(file_type_counts), aes(x = Var1, y = Freq)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = colors) +
+  labs(title = "File Type Frequency", x = "File Type", y = "Frequency") +
+  theme_minimal()
+
 
 # Scatterplot to visualize relationship between File_Size and Time_Taken
 ggplot(data, aes(x = File_Size, y = Time_Taken)) +
@@ -28,11 +41,11 @@ ggplot(file_type_df, aes(x = "", y = Freq, fill = Var1)) +
        fill = "File Type") +
   theme_void()
 
-ggplot(data, aes(x = File_Type, y = File_Size, fill = File_Type)) +
+ggplot(data, aes(x = File_Type, y = (File_Size/1024), fill = File_Type)) +
   geom_bar(stat = "identity") +
   labs(title = "File Size vs File Type",
        x = "File Type",
-       y = "File Size (bytes)") +
+       y = "File Size (KB)") +
   theme_minimal() +
   theme(legend.position = "none")
 
