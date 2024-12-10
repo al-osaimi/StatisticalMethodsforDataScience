@@ -1,29 +1,38 @@
 # file3.R
+library(ggplot2)
+library(dplyr)
 
 qualitative_measures <- function() {
   
   data(HairEyeColor)
   
-  # Convert the dataset to a dataframe
-  df <- as.data.frame(HairEyeColor)
+  hair_eye_df <- as.data.frame(HairEyeColor)
   
-  #calculate relative frequency table for 'Hair' column
-  rel_freq <- table(df$Hair)/length(df$Hair)
+  relative_freq <- hair_eye_df %>%
+    group_by(Hair) %>%
+    summarise(Frequency = sum(Freq)) %>%
+    mutate(RelativeFrequency = Frequency / sum(Frequency))
   
-  # Display the relative frequency
-  print(rel_freq)
+  print(relative_freq)
   
   # Bar Graph
-  barplot(rel_freq*100, main = "Bar Plot of Hair Color", col = rainbow(length(rel_freq)) , xlab = "Hair Color", ylab = "Relative Frequency %")
+  library(ggplot2)
+  ggplot(relative_freq, aes(x = Hair, y = RelativeFrequency, fill = Hair)) +
+    geom_bar(stat = "identity") +
+    labs(title = "Bar Graph of Hair Color Relative Frequency", x = "Hair Color", y = "Relative Frequency") +
+    theme_minimal()
   
   # Pie Chart
-  pie(rel_freq, main = "Pie Chart of Hair Color", col = rainbow(length(rel_freq)))
+  pie(relative_freq$RelativeFrequency,
+      labels = paste(relative_freq$Hair, "(", round(relative_freq$RelativeFrequency * 100, 1), "%)"),
+      main = "Pie Chart of Hair Color Relative Frequency",
+      col = rainbow(length(relative_freq$Hair)))
   
 }
 
 quantitative_measures <- function() {
   
-  data(airquality)
+  data("airquality")
   
   # cumulative frequency for the Temp column
   cumulative_freq <- cumsum(table(airquality$Temp))
