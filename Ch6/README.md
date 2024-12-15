@@ -122,7 +122,7 @@ $$
 P(A \cup B) = \frac{1}{6} + \frac{1}{6} = \frac{2}{6} = \frac{1}{3}
 $$
 
-**Interpretation**: The probability of rolling either a 2 or a 5 is $ \frac{1}{3} $.
+**Interpretation**: The probability of rolling either a 2 or a 5 is $$ \frac{1}{3} $$.
 
 ---
 
@@ -153,7 +153,7 @@ $$
 P(A \cup B) = \frac{4}{52} + \frac{13}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13}
 $$
 
-**Interpretation**: The probability of drawing a King or a Heart is $ \frac{4}{13} $.
+**Interpretation**: The probability of drawing a King or a Heart is $$ \frac{4}{13} $$.
 
 ---
 
@@ -178,7 +178,7 @@ $$
 P(A \cap B) = P(A) \cdot P(B) = \frac{1}{2} \cdot \frac{1}{6} = \frac{1}{12}
 $$
 
-**Interpretation**: The probability of getting Heads on the coin and rolling a 6 on the die is $ \frac{1}{12} $.
+**Interpretation**: The probability of getting Heads on the coin and rolling a 6 on the die is $$ \frac{1}{12} $$.
 
 ---
 
@@ -206,18 +206,16 @@ $$
 P(A \cap B) = \frac{5}{8} \cdot \frac{4}{7} = \frac{20}{56} = \frac{5}{14}
 $$
 
-**Interpretation**: The probability of drawing two red marbles in succession is $ \frac{5}{14} $.
+**Interpretation**: The probability of drawing two red marbles in succession is $$ \frac{5}{14} $$.
 
 ---
 
 ## **Summary**
 
 - **Addition Rule**:
-  - For mutually exclusive events: $ P(A \cup B) = P(A) + P(B) $
-  - For non-mutually exclusive events: $ P(A \cup B) = P(A) + P(B) - P(A \cap B) $
+  - For mutually exclusive events: $$ P(A \cup B) = P(A) + P(B) $$
+  - For non-mutually exclusive events: $$ P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
 
 - **Multiplication Rule**:
-  - For independent events: $ P(A \cap B) = P(A) \cdot P(B) $
-  - For dependent events: $ P(A \cap B) = P(A) \cdot P(B | A) $
-=======
- 
+  - For independent events: $$ P(A \cap B) = P(A) \cdot P(B) $$
+  - For dependent events: $$ P(A \cap B) = P(A) \cdot P(B | A) $$
