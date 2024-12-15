@@ -16,6 +16,7 @@ Two events are independent if the occurrence of one **does not affect the probab
 ### Example: Consider the chance experiment in which the type of transmission automatic (A) or manual (M) is recorded for each of the next two cars purchased from a certain dealer.
 
 **a. What is the set of all possible outcomes (the sample space)?**
+
 $$
 S={AA,AM,MA,MM}
 $$
@@ -27,21 +28,25 @@ $$
 **c. List the outcomes in each of the following events. Which of these eventsare simple events?**
 
 **i. B the event that at least one car has an auto- matic transmission**
+
 $$
 B={AA,AM,MA}
 $$
 
 **ii. C the event that exactly one car has an auto- matic transmission**
+
 $$
 C={AM,MA}
 $$
 
 **iii. D the event that neither car has an automatic transmission**
+
 $$
 D={MM}
 $$
 
 **d. What outcomes are in the event B and C ?**
+
 $$
 B∩C={AM,MA}
 $$
